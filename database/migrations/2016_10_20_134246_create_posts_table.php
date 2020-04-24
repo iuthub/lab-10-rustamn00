@@ -30,4 +30,12 @@ class CreatePostsTable extends Migration
     {
         Schema::drop('posts');
     }
+    public function user_id(){
+    Schema :: create ('posts ', function ( Blueprint $table ) {
+        $table -> increments ('id ');
+        $table -> timestamps ();
+        $table -> string ('title ');
+        $table -> text (' content ');
+        });
+    }
 }

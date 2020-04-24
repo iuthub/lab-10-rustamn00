@@ -61,3 +61,9 @@ Route::group(['prefix' => 'admin'], function() {
         'as' => 'admin.update'
     ]);
 });
+Auth::routes();
+Route :: group ([' prefix ' => 'admin ', 'middleware '=> [' auth ']] , function () {
+    //
+    });
+
+Route::get('/home', 'HomeController@index');

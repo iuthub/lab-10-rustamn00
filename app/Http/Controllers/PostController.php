@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Auth ;
+use Gate ;
 use App\Like;
 use App\Post;
 use App\Tag;
@@ -88,4 +89,5 @@ class PostController extends Controller
         $post->delete();
         return redirect()->route('admin.index')->with('info', 'Post deleted!');
     }
+    
 }
